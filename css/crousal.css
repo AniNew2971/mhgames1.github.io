@@ -1,0 +1,101 @@
+.carousel-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  position: absolute;
+}
+
+.carousel-container {
+  width: 400px;
+  height: 200px;
+  overflow: hidden;
+  margin: 0 auto;
+  border-radius: 20px;
+}
+
+.carousel {
+  display: flex;
+  width: auto;
+  animation: sliding 12s infinite;
+}
+.carousel div {
+  width: 400px;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+}
+.carousel:hover {
+  animation-play-state: paused;
+}
+.carousel .image-one {
+  background-image: url("https://raw.githubusercontent.com/Search-In/MH_Games_1stClient/Ani/images/rummy1.jpg");
+}
+.carousel .image-two {
+  background-image: url("https://raw.githubusercontent.com/Search-In/MH_Games_1stClient/Ani/images/rummy2.jpg");
+}
+.carousel .image-three {
+  background-image: url("https://raw.githubusercontent.com/Search-In/MH_Games_1stClient/Ani/images/rummy3.jpg");
+}
+
+@keyframes sliding {
+  30% {
+    transform: translateX(0);
+  }
+  35% {
+    transform: translateX(-400px);
+  }
+  65% {
+    transform: translateX(-400px);
+  }
+  70% {
+    transform: translateX(-800px);
+  }
+  98% {
+    transform: translateX(-800px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .carousel-wrapper {
+    width: 312px;
+    height: 210px;
+  }
+
+  .carousel-container {
+    width: 240px;
+    height: 150px;
+  }
+
+  .carousel {
+    width: 720px;
+  }
+  .carousel > div {
+    width: 240px;
+    height: 150px;
+  }
+
+  @keyframes sliding {
+    30% {
+      transform: translateX(0);
+    }
+    35% {
+      transform: translateX(-240px);
+    }
+    65% {
+      transform: translateX(-240px);
+    }
+    70% {
+      transform: translateX(-480px);
+    }
+    98% {
+      transform: translateX(-480px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+}
