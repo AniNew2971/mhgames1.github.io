@@ -1,4 +1,6 @@
 .carousel-wrapper {
+  width: 500px;
+  height: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -6,9 +8,12 @@
   position: absolute;
 }
 
+.carousel {
+  width: 1500px;
+}
 .carousel-container {
-  width: 400px;
-  height: 200px;
+  width: 500px;
+  height: 300px;
   overflow: hidden;
   margin: 0 auto;
   border-radius: 20px;
@@ -19,50 +24,160 @@
   width: auto;
   animation: sliding 12s infinite;
 }
+
 .carousel div {
-  width: 400px;
-  height: 200px;
+  width: 500px;
+  height: 300px;
   background-size: cover;
   background-position: center;
 }
+
 .carousel:hover {
   animation-play-state: paused;
 }
+
 .carousel .image-one {
   background-image: url("https://raw.githubusercontent.com/Search-In/MH_Games_1stClient/Ani/images/rummy1.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
+
 .carousel .image-two {
   background-image: url("https://raw.githubusercontent.com/Search-In/MH_Games_1stClient/Ani/images/rummy2.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
+
 .carousel .image-three {
   background-image: url("https://raw.githubusercontent.com/Search-In/MH_Games_1stClient/Ani/images/rummy3.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 @keyframes sliding {
   30% {
     transform: translateX(0);
   }
+
   35% {
-    transform: translateX(-400px);
+    transform: translateX(-500px);
   }
+
   65% {
-    transform: translateX(-400px);
+    transform: translateX(-500px);
   }
+
   70% {
-    transform: translateX(-800px);
+    transform: translateX(-1000px);
   }
+
   98% {
-    transform: translateX(-800px);
+    transform: translateX(-1000px);
   }
+
   100% {
     transform: translateX(0);
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 1200px) and (min-width : 600px) {
   .carousel-wrapper {
-    width: 312px;
+    width: 500px;
+    height: 380px;
+  }
+
+  .carousel-container {
+    width: 500px;
+    height: 350px;
+  }
+
+  .carousel {
+    width: 720px;
+  }
+
+  .carousel>div {
+    width: 1500px;
+    height: 350px;
+  }
+
+  @keyframes sliding {
+    30% {
+      transform: translateX(0);
+    }
+
+    35% {
+      transform: translateX(-500px);
+    }
+
+    65% {
+      transform: translateX(-500px);
+    }
+
+    70% {
+      transform: translateX(-1000px);
+    }
+
+    98% {
+      transform: translateX(-1000px);
+    }
+
+    100% {
+      transform: translateX(0);
+    }
+  }
+}
+
+@media screen and (max-width: 600px) and (min-width : 400px) {
+  .carousel-wrapper {
+    width: 350px;
     height: 210px;
+  }
+
+  .carousel-container {
+    width: 350px;
+    height: 210px;
+  }
+
+  .carousel {
+    width: 720px;
+  }
+
+  .carousel>div {
+    width: 950px;
+    height: 210px;
+  }
+
+  @keyframes sliding {
+    30% {
+      transform: translateX(0);
+    }
+
+    35% {
+      transform: translateX(-350px);
+    }
+
+    65% {
+      transform: translateX(-350px);
+    }
+
+    70% {
+      transform: translateX(-700px);
+    }
+
+    98% {
+      transform: translateX(-700px);
+    }
+
+    100% {
+      transform: translateX(0);
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .carousel-wrapper {
+    width: 240px;
+    height: 150px;
   }
 
   .carousel-container {
@@ -73,7 +188,8 @@
   .carousel {
     width: 720px;
   }
-  .carousel > div {
+
+  .carousel>div {
     width: 240px;
     height: 150px;
   }
@@ -82,18 +198,23 @@
     30% {
       transform: translateX(0);
     }
+
     35% {
       transform: translateX(-240px);
     }
+
     65% {
       transform: translateX(-240px);
     }
+
     70% {
       transform: translateX(-480px);
     }
+
     98% {
       transform: translateX(-480px);
     }
+
     100% {
       transform: translateX(0);
     }
