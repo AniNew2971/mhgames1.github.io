@@ -176,22 +176,22 @@
 
 @media screen and (max-width: 400px) {
   .carousel-wrapper {
-    width: 240px;
-    height: 150px;
+    width: 300px;
+    height: 170px;
   }
 
   .carousel-container {
-    width: 240px;
-    height: 150px;
+    width: 300px;
+    height: 170px;
   }
 
   .carousel {
-    width: 720px;
+    width: 900px;
   }
 
   .carousel>div {
-    width: 240px;
-    height: 150px;
+    width: 300px;
+    height: 170px;
   }
 
   @keyframes sliding {
@@ -200,19 +200,19 @@
     }
 
     35% {
-      transform: translateX(-240px);
+      transform: translateX(-300px);
     }
 
     65% {
-      transform: translateX(-240px);
+      transform: translateX(-300px);
     }
 
     70% {
-      transform: translateX(-480px);
+      transform: translateX(-600px);
     }
 
     98% {
-      transform: translateX(-480px);
+      transform: translateX(-600px);
     }
 
     100% {
