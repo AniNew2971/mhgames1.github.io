@@ -3659,8 +3659,8 @@ html.no-csstransitions .home-content__main {
   background-image: url("../images/appstore.png");
 }
 
-.s-download .download-badges li a.badge-googleplay {
-  background-image: url("../images/google-play.png");
+.s-download .download-badges li a.badge-downloadapk {
+  background-image: url("../images/downloadapk.png");
 }
 
 .s-download .download-bottom-image {
@@ -4115,3 +4115,5 @@ html.no-csstransitions .home-content__main {
 }
 
 /*# sourceMappingURL=main.css.map */
+
+/* APK download button */
