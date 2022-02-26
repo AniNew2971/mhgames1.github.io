@@ -37,19 +37,19 @@
 }
 
 .carousel .image-one {
-  background-image: url("https://raw.githubusercontent.com/Search-In/MH_Games_1stClient/Ani/images/rummy1.jpg");
+  background-image: url("../images/rummy_ss1.jpeg");
   background-size: contain;
   background-repeat: no-repeat;
 }
 
 .carousel .image-two {
-  background-image: url("https://raw.githubusercontent.com/Search-In/MH_Games_1stClient/Ani/images/rummy2.jpg");
+  background-image: url("../images/rummy_ss2.jpeg");
   background-size: contain;
   background-repeat: no-repeat;
 }
 
 .carousel .image-three {
-  background-image: url("https://raw.githubusercontent.com/Search-In/MH_Games_1stClient/Ani/images/rummy3.jpg");
+  background-image: url("../images/rummy_ss_board.jpeg");
   background-size: contain;
   background-repeat: no-repeat;
 }
