@@ -1,0 +1,51 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.image_main > img {
+  width: 100%;
+}
+
+.download_btn {
+  width: 60%;
+  margin: auto;
+  background: limegreen;
+  color: white;
+  border-radius: 10px;
+  padding: 15px;
+  font-weight: 600;
+}
+
+.download_btn_cont {
+  padding: 20px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.features {
+  color: red;
+  font-weight: 600;
+  text-align: center;
+  font-size: 22px;
+}
+
+.row {
+  font-weight: 700;
+  font-size: 30px;
+  text-align: center;
+}
+
+.col-6 {
+  margin: 20px 0;
+}
+
+#age {
+  position: absolute;
+  bottom: 70px;
+  left: 5px;
+  width: 90px;
+  background: white;
+  border-radius: 70%;
+}
