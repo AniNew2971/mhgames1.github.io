@@ -1,0 +1,22 @@
+{
+  "name": "aa_final_website_mhgames",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mhgames1/mhgames1.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "singular-sdk": "^1.3.5"
+  },
+  "bugs": {
+    "url": "https://github.com/mhgames1/mhgames1.github.io/issues"
+  },
+  "homepage": "https://github.com/mhgames1/mhgames1.github.io#readme"
+}

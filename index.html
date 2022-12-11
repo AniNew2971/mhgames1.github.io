@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <!--- basic page needs
-        ================================================== -->
+    ================================================== -->
     <title>MH-Games</title>
     <!--  meta tags
-        ==================================================-->
+    ==================================================-->
     <!-- Author -->
     <meta name="author" content="MH-Games" />
     <!-- description -->
@@ -49,19 +49,14 @@
     <meta name="coverage" content="Worldwide" />
     <meta name="distribution" content="Global" />
     <!-- mobile specific metas
-        ================================================== -->
+    ================================================== -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- CSS
-        ================================================== -->
-    <link href="css/style.css" rel="stylesheet" />
-    <!-- <link href="css/main.css" rel="stylesheet" /> -->
-    <!-- CSS only -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
-      crossorigin="anonymous"
-    />
+    ================================================== -->
+    <link href="css/base.css" rel="stylesheet" />
+    <link href="css/vendor.css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
+    <link href="css/crousal.css" rel="stylesheet" />
     <link
       crossorigin="anonymous"
       href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
@@ -69,11 +64,13 @@
       rel="stylesheet"
     />
     <!-- script
-        ================================================== -->
+    ================================================== -->
     <script src="js/modernizr.js"></script>
     <script src="js/pace.min.js"></script>
+    <script type = "text/javascript" src="index.js"></script>
+    <script src="https://web-sdk-cdn.singular.net/singular-sdk/latest/singular-sdk.js"></script>
     <!-- favicons
-        ================================================== -->
+    ================================================== -->
     <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <link href="favicon.ico" rel="icon" type="image/x-icon" />
     <link
@@ -82,54 +79,392 @@
       sizes="180x180"
     />
     <link href="./images/site.webmanifest" rel="manifest" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
   </head>
+  <body id="top" onload="initSingularTest()">
+    <!-- preloader
+    ================================================== -->
+    <div id="preloader">
+      <div class="dots-jump" id="loader">
+        <div></div>
 
-  <body>
-    <div class="">
-      <div class="image_main" style="position: relative">
-        <img src="images/mhgames_back.jpeg" alt="" />
-        <img id="age" src="images/18plus.png" />
-      </div>
-      <div class="download_btn_cont">
-        <a href="./images/mhrummy.apk" download="mhrummy">
-            <button class="download_btn">
-            DOWNLOAD NOW <i class="fa-solid fa-download"></i></button
-        ></a>
-      </div>
-      <div style="background: lightgray; width: 100%; padding: 7px">
-        <div class="features">
-          <p>ऑनलाइन रम्मी चे लोकप्रीय 4 प्रकार</p>
-        </div>
-        <div class="row">
-          <div class="col-6">पपलु रम्मी</div>
-          <div class="col-6">पॉइंट रम्मी</div>
-          <div class="col-6">डील रम्मी</div>
-          <div class="col-6">पुल रम्मी</div>
-        </div>
-      </div>
-      <div style="text-align: center; padding: 20px">
-        (Karnataka, Andhra Pradesh, Odisha, Meghalaya, Sikkim, Nagaland, Assam
-        and Telangana. Players from these states are not allowed here)
+        <div></div>
+
+        <div></div>
       </div>
     </div>
+    <!-- header 
+    ================================================== -->
+
+    <header class="s-header">
+      <div class="row">
+        <div class="header-logo">
+          <a class="site-logo" href="index.html"
+            ><img alt="Homepage" src="images/logo.png" />
+            <img
+              alt=""
+              src="https://github.com/Search-In/MH_Games_1stClient/blob/Ani/images/MH-Games.png?raw=true"
+              style="width: auto !important"
+            />
+          </a>
+        </div>
+
+        <!-- <nav class="header-nav-wrap">
+          <ul class="header-main-nav">
+            <li class="current">
+              <a class="smoothscroll" href="#home" title="intro">Intro</a>
+            </li>
+            <li>
+              <a class="smoothscroll" href="#about" title="about">About</a>
+            </li>
+            <li>
+              <a class="smoothscroll" href="#features" title="features"
+                >Features</a
+              >
+            </li>
+            <li>
+              <a class="smoothscroll" href="#upcoming" title="upcoming"
+                >Upcoming</a
+              >
+            </li>
+            <li>
+              <a class="smoothscroll" href="#download" title="download"
+                >Download</a
+              >
+            </li>
+          </ul>
+
+          <div class="header-cta">
+            <a
+              class="btn btn--primary header-cta__btn smoothscroll"
+              href="#download"
+              >Get The App</a
+            >
+          </div>
+        </nav> -->
+        <!-- end header-nav-wrap --><a class="header-menu-toggle" href="#"
+          ><span>Menu</span></a
+        >
+      </div>
+    </header>
+    <!-- end header --><!-- home
+    ================================================== -->
+
+    <section
+      class="s-home target-section"
+      id="home"
+      style="
+        background-image: url('../images/mhgames_back.jpeg');
+      ">
+      <div class="shadow-overlay"></div>
+
+      <div class="home-content">
+        <div class="row home-content__main">
+          <div class="home-content__left">
+            <h1>MH RUMMY</h1>
+
+            <center>by</center>
+            MH-Games.
+
+            <h2 style="color: rgb(207, 206, 206)">
+              India&#39;s most trusted, Genuine, Legal Rummy Destination
+            </h2>
+
+            <div class="home-content__btn-wrap">
+              <a
+                class="btn btn--primary home-content__btn smoothscroll"
+                href="#download"
+                >Download the App
+              </a>
+            </div>
+          </div>
+          <!-- end home-content__left-->
+
+          <div
+            class="home-content__right d-flex"
+            style="justify-content: center; height: 100%"
+          >
+            <!-- <img src="https://github.com/Search-In/MH_Games_1stClient/blob/Ani/images/hands1.png?raw=true" alt="" style="width: 100%;" class="hand_img"> -->
+            <div class="carousel-wrapper">
+              <div class="carousel-container">
+                <div class="carousel">
+                  <div class="image-one"></div>
+
+                  <div class="image-two"></div>
+
+                  <div class="image-three"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end home-content__right -->
+        </div>
+        <!-- end home-content__main -->
+
+        <ul class="home-content__social">
+          <li><a href="#0">Facebook</a></li>
+          <li><a href="#0">twitter</a></li>
+          <li><a href="#0">Instagram</a></li>
+        </ul>
+      </div>
+      <!-- end home-content --><a class="home-scroll smoothscroll" href="#about"
+        ><span class="home-scroll__text">Scroll</span>
+      </a>
+    </section>
+    <!-- end s-home --><!-- about
+    ================================================== -->
+
+    <section class="s-about target-section" id="about">
+      <div class="row section-header has-bottom-sep" data-aos="fade-up">
+        &nbsp;
+        <div class="col-full">
+          <h2 style="color: rgb(236, 230, 213); font-size: 30px">
+            The game of rummy is legal because it is a game of skill and hence
+            protected by the Constitution of India. Playing a game of skill like
+            rummy is considered a business activity from a legal point of view,
+            and such activity of playing a game of skill with cash is
+            safeguarded under Article 19(1)(g) of the Constitution of India.
+          </h2>
+
+          <p class="lead">
+            This game is skill-based digital online<br />
+            mobile gaming platform with financial fulfillment.<br />
+            &nbsp;
+          </p>
+
+          <div
+            style="
+              background: rgba(248, 248, 255, 0);
+              font-size: 0px;
+              padding: 10px;
+              border: 2px solid rgb(247, 67, 44);
+              margin: 5px;
+            "
+          >
+            <p style="color: rgb(247, 67, 44); font-size: 35px">
+              Please play on your self-responsibility.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- end section-header -->
+
+      <div class="row wide about-desc" data-aos="fade-up">
+        <center>
+          <h3 style="color: white">Introducing</h3>
+        </center>
+        &nbsp;
+
+        <div class="col-full d-flex text-center justify_space_ar">
+          <div class="about-desc__slide">
+            <h3 class="item-title" style="font-size: 35px">1. Paplu Rummy</h3>
+          </div>
+          <!-- end about-desc__slide -->
+
+          <div class="about-desc__slide">
+            <h3 class="item-title" style="font-size: 35px">2. Points Rummy</h3>
+          </div>
+          <!-- end about-desc__slide -->
+
+          <div class="about-desc__slide">
+            <h3 class="item-title" style="font-size: 35px">3. Deal Rummy</h3>
+          </div>
+          <!-- end about-desc__slide -->
+
+          <div class="about-desc__slide">
+            <h3 class="item-title" style="font-size: 35px">4. Pool Rummy</h3>
+          </div>
+          <!-- end about-desc__slide -->
+        </div>
+        <!-- end about-desc__slider -->
+      </div>
+      <!-- end about-desc -->
+    </section>
+    <!-- end s-about --><!-- features
+        ================================================== -->
+
+    <section class="s-features target-section" id="features">
+      <h1
+        class="display-2 text-center"
+        data-aos="fade-up"
+        style="
+          font-size: 40px;
+          background: linear-gradient(
+            to right,
+            #f32170,
+            #ff6b08,
+            #cf23cf,
+            #eedd44
+          );
+          -webkit-text-fill-color: transparent;
+          -webkit-background-clip: text;
+        "
+      >
+        So Play More &amp; Win More
+      </h1>
+      &nbsp;
+
+      <div class="row section-header has-bottom-sep" data-aos="fade-up">
+        <div class="col-full">
+          <h1 class="display-1">
+            Instant UNLIMITED winning withdrawals<br />
+            in 10 mins
+          </h1>
+
+          <p></p>
+        </div>
+      </div>
+      <!-- end section-header --><!-- end features -->
+    </section>
+    <!-- end s-features --><!-- upcoming
+    ================================================== --><!-- end s-pricing --><!-- download
+    ================================================== -->
+
+    <section class="s-download target-section" id="download">
+      <div class="row section-header align-center" data-aos="fade-up">
+        <div class="col-full">
+          <h1 class="display-1">
+            Join Our Community of Passionate Rummy players.
+          </h1>
+
+          <p class="lead"></p>
+        </div>
+      </div>
+      <!-- end section-header -->
+
+      <div class="row">
+        <div class="col-full text-center">
+          <ul class="download-badges" data-aos="fade-up">
+            <li>
+              <a class="badge-downloadapk" href="./images/mhrummy.apk" title=""
+                >Play Store</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row download-bottom-image" data-aos="fade-up">
+        <img
+          alt="App Screenshots"
+          src="images/app-screen.webp"
+          style="border-top-right-radius: 50px; border-top-left-radius: 50px"
+        />
+      </div>
+
+      <div class="elfsight-app-949e06ca-605c-4ed8-b283-f949bf798232"></div>
+    </section>
+    <!-- end s-download --><!-- footer
+    ================================================== -->
+
     <footer class="s-footer footer">
+      <div class="row section-header align-center">
+        <div class="col-full">
+          <h1 class="display-1">Let&#39;s Stay In Touch.</h1>
+
+          <p class="lead">
+            Subscribe for updates, special offers, and other amazing stuff.
+          </p>
+        </div>
+      </div>
+      <!-- end section-header -->
+
+      <div class="row footer__top">
+        <div class="col-full footer__subscribe end">
+          <div class="subscribe-form">
+            <form class="group" id="mc-form" novalidate="true">
+              <input
+                class="email"
+                id="mc-email"
+                name="EMAIL"
+                placeholder="Email Address"
+                required=""
+                type="email"
+                value=""
+              />
+              <input name="subscribe" type="submit" value="Sign Up" />
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- end footer__top -->
+
       <div class="row footer__bottom">
-        <div class="col-full ss-copyright" style="font-size: 18px">
+        <div class="footer__about col-five tab-full left">
+          <h4>About MH-Games.</h4>
+
+          <p>Awesome game development company.</p>
+
+          <ul class="footer__social">
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+
+        <div class="col-full ss-copyright">
           <span>&copy; All rights reserved.</span>
           <span
             >Designed by
-            <a href="https://www.searchin.co.in/">Search-In</a></span
+            <a href="https://searchin.co.in/">Search-In</a></span
           >
         </div>
       </div>
       <!-- end footer__bottom -->
     </footer>
+    <!-- end s-footer --><!-- Java Script
+    ================================================== -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <script type = "text/javascript" src="index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.caroufredsel/6.2.1/jquery.carouFredSel.packed.js"></script>
+    <script src="https://web-sdk-cdn.singular.net/singular-sdk/latest/singular-sdk.js"></script>
+    <script>
+    const sdkKey = 'pccoepune_f4fc6594';
+    const sdkSecret = '196b84ecdede2837bd06f6ef4d678f4c'
+    const productId = 'online.mhgames';
+        function initSingular() {      
+            const config = new SingularConfig(sdkKey, sdkSecret, productId)
+                    .withInitFinishedCallback(initParams=> {
+                // This callback will be called when the init method has finished
+
+                // You can get Singular Device id here
+            const singularDeviceId = initParams.singularDeviceId;
+            console.log(singularDeviceId);
+            });
+        singularSdk.init(config);
+        }
+        
+    </script>
+    <script>
+      //requires carouFredsel.js
+      //pen by Beatrize
+
+      jQuery(document).ready(function () {
+        "use strict";
+        $(".carousel").carouFredSel({
+          responsive: true,
+          width: "100%",
+          circular: true,
+          scroll: {
+            item: 1,
+            duration: 500,
+            pauseOnHover: true,
+          },
+          auto: true,
+          items: {
+            visible: {
+              min: 1,
+              max: 1,
+            },
+            height: "variable",
+          },
+          pagination: {
+            container: ".sliderpagnation",
+            anchorBuilder: false,
+          },
+        });
+      });
+    </script>
   </body>
 </html>
