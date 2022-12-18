@@ -30,7 +30,7 @@
   );
 
 
-  (function () {
+ 
     var graph = d3.select(".graph");
     var data = [
       {
@@ -96,7 +96,7 @@
           return -xScale(data.score) + "%";
         }
       });
-  })();
+
   
   "use strict";
 var speed = {
