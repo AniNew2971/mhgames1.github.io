@@ -46,16 +46,28 @@ h1 {
   margin-top: 10px;
 
 }
-
+.background_container{
+  background: url("https://img.freepik.com/free-photo/grunge-vintage-old-paper-background_1373-431.jpg?w=2000") no-repeat center center scroll;
+ 
+  
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  /* background-color: #ab9170; */
+  /* background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; */
+}
 .page-wrap {
   max-width: 1280px;
   min-height: 100%;
-  /* background: url("./images/old-paper-transparent-background-20.png") no-repeat center center fixed; */
-  background-image: url("./images/old-paper-transparent-background-20.png");
-  background-position: center;
-  /* background-size: cover; */
-  background-repeat: no-repeat;
-  background-attachment:scroll;
+  /* background: url("./images/old-paper-transparent-background-20.png") no-repeat center center ;
+  background-attachment:scroll; */
+  /* background-image: url("./images/old-paper-transparent-background-20.png"); */
+  /* background-repeat: no-repeat; */
+
   padding: 10px;
   margin: auto;
   display: grid;
@@ -108,12 +120,17 @@ h1 {
 
 @media screen and (max-width: 980px) {
   .page-wrap {
-    grid-template-columns: auto;
+    /* grid-template-columns: auto; */
     grid-template-areas:
       "left_content"
       "center_content"
-      "right_content"
-
+      "right_content";
+      width: fit-content;
+block-size: fit-content;
+  }
+  .background_container{
+    width: fit-content;
+    block-size: fit-content;
   }
 
   #toggle {
@@ -270,6 +287,7 @@ h2 {
 }
 
 .skoftskillimg {
+  
   margin-top: 1.5em;
   width: 150px;
   height: 150px;
