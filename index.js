@@ -31,71 +31,71 @@
 
 
  
-    var graph = d3.select(".graph");
-    var data = [
-      {
-        name: "Concept Development",
-        score: 18
-      },
-      {
-        name: "Drafting & 3D Modelling",
-        score: 18.5
-      },
-      {
-        name: "Sketching & Painting",
-        score: 19.5
-      },
-      {
-        name: "Model Making",
-        score: 19
-      },{
-        name: "Graphic designing",
-        score: 19
-      }
-    ];
-    var containerBars = graph.selectAll("div").data(data).enter().append("div");
+    // var graph = d3.select(".graph");
+    // var data = [
+    //   {
+    //     name: "Concept Development",
+    //     score: 18
+    //   },
+    //   {
+    //     name: "Drafting & 3D Modelling",
+    //     score: 18.5
+    //   },
+    //   {
+    //     name: "Sketching & Painting",
+    //     score: 19.5
+    //   },
+    //   {
+    //     name: "Model Making",
+    //     score: 19
+    //   },{
+    //     name: "Graphic designing",
+    //     score: 19
+    //   }
+    // ];
+    // var containerBars = graph.selectAll("div").data(data).enter().append("div");
   
-    var xScale = d3.scale.linear().range([100, 0]);
+    // var xScale = d3.scale.linear().range([100, 0]);
   
-    var xMin = 0;
-    var xMax =
-      d3.max(data, function (data) {
-        return data.score;
-      }) * 1.1;
+    // var xMin = 0;
+    // var xMax =
+    //   d3.max(data, function (data) {
+    //     return data.score;
+    //   }) * 1.1;
   
-    xScale.domain([xMin, xMax]);
+    // xScale.domain([xMin, xMax]);
   
-    containerBars
-      .append("p")
-      .attr("class", "name")
-      .text(function (data) {
-        return data.name;
-      })
-      .append("span")
-      .attr("class", "score")
+    // containerBars
+    //   .append("p")
+    //   .attr("class", "name")
+    //   .text(function (data) {
+    //     return data.name;
+    //   })
+    //   .append("span")
+    //   .attr("class", "score")
 
-    var bars = containerBars.append("div").attr({
-      class: "bar"
-    });
+    // var bars = containerBars.append("div").attr({
+    //   class: "bar"
+    // });
   
-    var infoBar = bars
-      .append("div")
-      .attr({
-        class: "infoBar"
-      })
-      .style("left", function (data) {
-        return "-100%";
-      });
+    // var infoBar = bars
+    //   .append("div")
+    //   .attr({
+    //     class: "infoBar"
+    //   })
+    //   .style("left", function (data) {
+    //     return "-100%";
+    //   });
   
-    infoBar
-      .transition()
-      .duration(1500)
-      .ease("cubic-out")
-      .style({
-        left: function (data) {
-          return -xScale(data.score) + "%";
-        }
-      });
+    // infoBar
+    //   .transition()
+    //   .duration(1500)
+    //   .ease("cubic-out")
+    //   .style({
+    //     left: function (data) {
+    //       return -xScale(data.score) + "%";
+    //     }
+    //   });
 
   
   "use strict";
