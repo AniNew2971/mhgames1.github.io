@@ -112,6 +112,14 @@ h1 {
     grid-column: 2 / 4;
 }
 
+.linkColor {
+    /* color: black; */
+    background: -webkit-linear-gradient(rgb(138, 141, 98), rgb(0, 0, 0));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
 @media screen and (max-width: 980px) {
     .page-wrap {
         /* grid-template-columns: auto; */
